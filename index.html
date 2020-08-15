@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画板</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="cavans"></div>
+    
+    <script>
+        cavans.onmousemove = (event) =>{
+            console.log(event.clientX)
+            console.log(event.clientY)
+            let div = document.createElement('div')
+            div.style.position = "absolute"
+            div.style.left = event.clientX + 'px'
+            div.style.top = event.clientY + 'px'
+            div.style.width = '10px'
+            div.style.height = '10px'
+            div.style.marginLeft = '-5px'
+            div.style.marginTop = '-5px'
+            div.style.borderRadius = '50%'
+            div.style.background = '#000'
+            cavans.appendChild(div)
+        }
+    </script>
+</body>
+</html>
